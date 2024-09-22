@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom'; // Import Link and useLocation
 import Logo from '../assets/images/logo.png'; 
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); // Hook to get the current path
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const checkActivePage = (path: string) => {
-    return window.location.pathname === path ? 'text-blue-500 border-b-2 border-blue-500' : 'text-gray-700 hover:text-blue-500';
+    return location.pathname === path ? 'text-blue-500 border-b-2 border-blue-500' : 'text-gray-700 hover:text-blue-500';
   };
 
   return (
@@ -22,15 +24,15 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex space-x-8">
-            <a href="/" className={`${checkActivePage('/')} px-2 py-1`}>
+            <Link to="/" className={`${checkActivePage('/')} px-2 py-1`}>
               Home
-            </a>
-            <a href="/about" className={`${checkActivePage('/about')} px-2 py-1`}>
+            </Link>
+            <Link to="/about" className={`${checkActivePage('/about')} px-2 py-1`}>
               About Us
-            </a>
-            <a href="/affiliate" className={`${checkActivePage('/affiliate')} px-2 py-1`}>
+            </Link>
+            <Link to="/affiliate" className={`${checkActivePage('/affiliate')} px-2 py-1`}>
               Become An Affiliate
-            </a>
+            </Link>
           </div>
 
           <div className="hidden md:flex">
@@ -51,15 +53,15 @@ const Navbar: React.FC = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="flex flex-col space-y-2 px-4 pt-2 pb-4">
-            <a href="/" className={`${checkActivePage('/')} px-2 py-1`}>
+            <Link to="/" className={`${checkActivePage('/')} px-2 py-1`}>
               Home
-            </a>
-            <a href="/about" className={`${checkActivePage('/about')} px-2 py-1`}>
+            </Link>
+            <Link to="/about" className={`${checkActivePage('/about')} px-2 py-1`}>
               About
-            </a>
-            <a href="/affiliate" className={`${checkActivePage('/affiliate')} px-2 py-1`}>
+            </Link>
+            <Link to="/affiliate" className={`${checkActivePage('/affiliate')} px-2 py-1`}>
               Become An Affiliate
-            </a>
+            </Link>
             <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-3xl">
               Connect With Us
             </button>
