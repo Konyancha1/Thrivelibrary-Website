@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/footer';
 import Home from './pages/home';
 import About from './pages/about';
+import Affiliate from './pages/affiliate';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/affiliate" element={<Affiliate />} />
       </Routes>
       <Footer />
     </Router>

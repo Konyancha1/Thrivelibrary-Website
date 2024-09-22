@@ -3,7 +3,7 @@ import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import Logo from '../assets/images/logo.png';
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full md:min-w-[93%] mx-auto bg-white text-black py-10">
+    <footer className="w-full md:max-w-7xl mx-auto bg-white text-black py-10">
       <div className="container mx-auto px-6 sm:px-12 md:px-16 lg:px-28">
         <div className="flex flex-col lg:flex-row lg:justify-between space-y-8 lg:space-y-0">
           <div className="flex flex-col items-start space-y-4">
