@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/images/logo.png';
+
 const Footer: React.FC = () => {
   return (
     <footer className="w-full md:max-w-7xl mx-auto bg-white text-black py-10">
@@ -25,24 +27,24 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="font-semibold text-lg md:text-xl mb-4">Company</h3>
               <ul className="space-y-2">
-                <li><a href="/" className="hover:text-blue-500 text-sm md:text-lg">Home</a></li>
-                <li><a href="/about" className="hover:text-blue-500 text-sm md:text-lg">About Us</a></li>
+                <li><Link to="/" className="hover:text-blue-500 text-sm md:text-lg">Home</Link></li>
+                <li><Link to="/about" className="hover:text-blue-500 text-sm md:text-lg">About Us</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold text-lg md:text-xl mb-4">Services</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:text-blue-500 text-sm md:text-lg">Consulting</a></li>
-                <li><a href="/affiliate" className="hover:text-blue-500 text-sm md:text-lg">Become an Affiliate</a></li>
+                <li><Link to="#" className="hover:text-blue-500 text-sm md:text-lg">Consulting</Link></li>
+                <li><Link to="/affiliate" className="hover:text-blue-500 text-sm md:text-lg">Become an Affiliate</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold text-lg md:text-xl mb-4">Links</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:text-blue-500 text-sm md:text-lg">Help Center</a></li>
-                <li><a href="#" className="hover:text-blue-500 text-sm md:text-lg">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-blue-500 text-sm md:text-lg">Terms & Conditions</a></li>
-                <li><a href="/careers" className="hover:text-blue-500 text-sm md:text-lg">Careers</a></li>
+                <li><Link to="#" className="hover:text-blue-500 text-sm md:text-lg">Help Center</Link></li>
+                <li><Link to="#" className="hover:text-blue-500 text-sm md:text-lg">Privacy Policy</Link></li>
+                <li><Link to="#" className="hover:text-blue-500 text-sm md:text-lg">Terms & Conditions</Link></li>
+                <li><Link to="/careers" className="hover:text-blue-500 text-sm md:text-lg">Careers</Link></li>
               </ul>
             </div>
           </div>
